@@ -87,10 +87,10 @@ function App() {
   return (
     <>
       <div className='container-fluid'>
-        <div className='row w-100'>
+        <div className='row flex justify-content-center align-items-center ' >
           <div className='col-md-3'></div>
-          <div className='col-md-6 p-md-5 p-0' >
-            <div className='rounded bg-light p-5 ' style={{width:"600px"}}> 
+          <div className='col-md-6 p-md-5 p-0  ' >
+            <div className='rounded bg-light p-5 '> 
              <h2 className='text-center'><span style={{color:"red"}}>BMI</span> <span style={{color:"yellow"}}>calculater</span></h2>
              <h4 className='text-center p-3' >Your bmi is</h4>
              <h2 className='text-center p-2 ' style={{color:"green"}}>{bmi}</h2>
@@ -103,11 +103,11 @@ function App() {
 
                 <div className='d-flex justify-content-between p-2'>
                    <h5>Height (cm) :</h5>
-                   <input type="0" name='height' placeholder='0' value={height} className='form-control'  style={{width:"200px"}} onChange={(e)=>Validite(e)}/>
+                   <input type="0" name='height' placeholder='0' value={height} className='form-control md-w-100 w-50'   onChange={(e)=>Validite(e)}/>
                    </div>
                    <div className='d-flex justify-content-between p-2 '>
                    <h5>Weight (kg) :</h5>                 
-                   <input type="0" name='weight' placeholder='0' value={weight} className='form-control'  style={{width:"200px"}} onChange={(e)=>Validite(e)}/>
+                   <input type="0" name='weight' placeholder='0' value={weight} className='form-control md-w-100 w-50'   onChange={(e)=>Validite(e)}/>
   
                 </div>
                
@@ -116,8 +116,8 @@ function App() {
 
 
                 <div className='d-flex justify-content-between my-3 '>
-                <Button onClick={handreset} style={{width:'190px', height:'40px'}} variant="danger" disabled={isWight && isHeight ?false:true}>Reset</Button>
-                <Button onClick={hansubmit} style={{width:'190px', height:'40px'}} variant="primary">Submit</Button>
+                <Button onClick={handreset} className='me-3 w-25'  variant="danger" disabled={isWight && isHeight ?false:true}>Reset</Button>
+                <Button onClick={hansubmit} className='me-2 w-25'  variant="primary">Submit</Button>
                 </div>
                  
             
